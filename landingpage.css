@@ -9,34 +9,60 @@ body {
     line-height: 1.6;
 }
 
-h1 {
-    font-size: 2.5rem;
-    color: #2c3e50;
-    margin: 2rem 0;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-video {
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    margin: 2rem 0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+header h1 {
+    font-size: 3rem;
+    color: #2c3e50;
+    margin: 2rem 0 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
 }
 
-video:hover {
-    transform: scale(1.02);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+header .tagline {
+    font-size: 1.5rem;
+    color: #4682b4;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+/* Media Container */
+.mediaContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 60px;
+    position: relative;
+    flex-wrap: nowrap;
+    margin-bottom: 2rem;
+}
+
+.video {
+    width: 43%;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    background-color: black;
+    z-index: 10;
+}
+
+.picture img {
+    width: 200px; 
+    height: 200px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    position: relative;
+    z-index: 1;
+    border: 4px solid #2c3e50; 
 }
 
 nav {
-    border: 2px solid #333333;
+    border: 2px solid #2c3e50;
     width: 70%;
     margin: 2rem auto;
     background: white;
@@ -100,7 +126,18 @@ nav a:hover .fa-brands {
     transform: scale(1.2);
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
+    .mediaContainer {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .video, .picture img {
+        width: 100%;
+        margin: 0;
+    }
+
     nav {
         width: 90%;
     }
@@ -113,18 +150,13 @@ nav a:hover .fa-brands {
         text-align: center;
     }
 
-    h1 {
+    header h1 {
         font-size: 2rem;
-    }
-
-    video {
-        width: 100%;
-        height: auto;
     }
 }
 
 @media (max-width: 480px) {
-    h1 {
+    header h1 {
         font-size: 1.8rem;
     }
 
