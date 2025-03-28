@@ -130,76 +130,6 @@ nav {
     transform: scale(1.2);
 }
 
-/* Responsive Navigation */
-@media (max-width: 768px) {
-    nav {
-        width: 95%;
-    }
-    
-    .nav-menu {
-        gap: 0.3rem;
-    }
-    
-    .nav-item a {
-        font-size: 1rem;
-        padding: 0.7rem 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .nav-menu {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .nav-item {
-        width: 100%;
-        text-align: center;
-    }
-    
-    .nav-item a {
-        justify-content: center;
-    }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .mediaContainer {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .video, .picture img {
-        width: 100%;
-        margin: 0;
-    }
-
-    nav {
-        width: 90%;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav li {
-        text-align: center;
-    }
-
-    header h1 {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.8rem;
-    }
-
-    nav a {
-        font-size: 1rem;
-    }
-}
 
 footer {
     background-color: #333333;
@@ -231,4 +161,106 @@ footer {
 
 .social-icon:hover {
     color: #cd7f32;
+}
+@media (min-width: 576px) {
+    body {
+        font-size: 1.1rem;
+    }
+    
+    header h1 {
+        font-size: 2.2rem;
+        letter-spacing: 1.5px;
+    }
+    
+    header .tagline {
+        font-size: 1.2rem;
+    }
+    
+    .nav-item a {
+        flex-direction: row;
+        font-size: 1rem;
+    }
+    
+    .fa-solid, .fa-brands {
+        margin-right: 8px;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    
+    header h1 {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+    }
+    
+    header .tagline {
+        font-size: 1.3rem;
+    }
+    
+    .mediaContainer {
+        flex-direction: row;
+        gap: 40px;
+    }
+    
+    .video {
+        width: 55%;
+    }
+    
+    .picture img {
+        width: 180px;
+        height: 180px;
+        order: 0;
+    }
+    
+    nav {
+        width: 90%;
+    }
+    
+    .nav-menu {
+        gap: 0.5rem;
+    }
+    
+    .nav-item {
+        min-width: 140px;
+    }
+}
+
+@media (min-width: 992px) {
+    header h1 {
+        font-size: 3rem;
+        letter-spacing: 3px;
+    }
+    
+    header .tagline {
+        font-size: 1.5rem;
+    }
+    
+    .mediaContainer {
+        gap: 60px;
+    }
+    
+    .video {
+        width: 43%;
+    }
+    
+    .picture img {
+        width: 200px;
+        height: 200px;
+        border-width: 4px;
+    }
+    
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        padding: 30px;
+    }
 }
